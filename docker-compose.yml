@@ -1,0 +1,9 @@
+version: '3.8'
+name: bad-coverage-reproduction
+services:
+  php:
+      build:
+        context: ./docker/
+      volumes:
+        - .:/var/www/html/app:delegated
+      command: tail -f /dev/null
